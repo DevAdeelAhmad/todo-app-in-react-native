@@ -31,37 +31,37 @@ export default function App() {
 
   return (
     <>
-    <StatusBar style="light"/>
-    <View style={styles.appContainer}>
-      <Button
-        title="Add New Goal"
-        color="#854EFE"
-        onPress={startAddTaskHandler}
-      />
-      <TaskInput
-        visible={modalVisibilty}
-        onAddTask={addTaskHandler}
-        onCancel={endAddTaskHandler}
-      />
-      <View style={styles.tasksContainer}>
-        <FlatList
-          data={tasks}
-          renderItem={(itemData) => {
-            itemData.index;
-            return (
-              <TaskItem
-                id={itemData.item.id}
-                onDeleteTask={deleteTaskHandler}
-                text={itemData.item.text}
-              />
-            );
-          }}
-          keyExtractor={(item, index) => {
-            return item.id;
-          }}
+      <StatusBar style="dark" />
+      <View style={styles.appContainer}>
+        <Button
+          title="Add New Task"
+          color="#af7eeb"
+          onPress={startAddTaskHandler}
         />
+        <TaskInput
+          visible={modalVisibilty}
+          onAddTask={addTaskHandler}
+          onCancel={endAddTaskHandler}
+        />
+        <View style={styles.tasksContainer}>
+          <FlatList
+            data={tasks}
+            renderItem={(itemData) => {
+              itemData.index;
+              return (
+                <TaskItem
+                  id={itemData.item.id}
+                  onDeleteTask={deleteTaskHandler}
+                  text={itemData.item.text}
+                />
+              );
+            }}
+            keyExtractor={(item, index) => {
+              return item.id;
+            }}
+          />
+        </View>
       </View>
-    </View>
     </>
   );
 }
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 50,
     paddingHorizontal: 16,
-    backgroundColor : "#1e085a",
+    backgroundColor: "#e3e9ff",
   },
   tasksContainer: {
     flex: 9,

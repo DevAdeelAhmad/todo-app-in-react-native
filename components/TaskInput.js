@@ -1,6 +1,12 @@
 import { useState } from "react";
-import { StyleSheet, TextInput, View, Button, Modal, Image } from "react-native";
-
+import {
+  StyleSheet,
+  TextInput,
+  View,
+  Button,
+  Modal,
+  Image,
+} from "react-native";
 
 function TaskInput(props) {
   const [enteredTaskText, setEnteredTaskText] = useState("");
@@ -17,7 +23,10 @@ function TaskInput(props) {
   return (
     <Modal visible={props.visible} animationType="slide">
       <View style={styles.inputContainer}>
-        <Image style={styles.image} source={require('../assets/images/logo.png')}/>
+        <Image
+          style={styles.image}
+          source={require("../assets/images/logo.png")}
+        />
         <TextInput
           style={styles.textInput}
           placeholder="Add Your Tasks"
@@ -26,10 +35,10 @@ function TaskInput(props) {
         />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
-            <Button title="Add Task" onPress={addTaskHandler} color='#5e0acc'/>
+            <Button title="Add Task" onPress={addTaskHandler} color="#ffbc74" />
           </View>
           <View style={styles.button}>
-            <Button title="Cancel" onPress={props.onCancel} color='#f31282'/>
+            <Button title="Cancel" onPress={props.onCancel} color="#FF4848" />
           </View>
         </View>
       </View>
@@ -40,33 +49,33 @@ function TaskInput(props) {
 export default TaskInput;
 
 const styles = StyleSheet.create({
-    inputContainer: {
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      padding:16,
-      backgroundColor:"#54FFF1"
-    },
+  inputContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#D9E1FF",
+  },
   textInput: {
     borderWidth: 1,
-    borderColor: "#cccccc",
+    borderColor: "black",
     width: "100%",
-    color:'#120438',
-    backgroundColor:"#e4d0ff",
+    color: "black",
+    backgroundColor: "white",
     padding: 8,
-    borderRadius : 6,
+    borderRadius: 6,
   },
   buttonContainer: {
-    marginTop:16,
+    marginTop: 16,
     flexDirection: "row",
   },
-  button:{
+  button: {
     width: 100,
-    marginHorizontal : 8,
+    marginHorizontal: 8,
   },
-  image:{
+  image: {
     width: 100,
     height: 100,
-    margin:20
-  }
+    margin: 20,
+  },
 });

@@ -20,8 +20,8 @@ const styles = StyleSheet.create({
   tasks: {
     margin: 8,
     borderRadius: 6,
-    backgroundColor: "#000000",
-    color: "white",
+    backgroundColor: "#9EFAFF",
+    color: "#949FBD",
   },
   //For iOS
   pressedItem:{
@@ -29,6 +29,6 @@ const styles = StyleSheet.create({
   },
   taskText: {
     padding: 8,
-    color: "white",
+    color: "black",
   },
 });
